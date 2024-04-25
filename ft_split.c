@@ -1,29 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 18:02:07 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/24 19:49:01 by ysirkich         ###   ########.fr       */
+/*   Created: 2024/04/25 18:49:53 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/04/25 18:51:36 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-
-	i = 0;
-	if (size <= 0)
-		return (0);
-	while (src[i] != '\0' && i < size - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (i);
+	
 }
