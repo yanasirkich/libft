@@ -8,7 +8,7 @@ CFILES	=	ft_calloc	ft_isascii	ft_memchr	ft_memmove	ft_strdup	\
          ft_bzero	ft_isalpha	ft_isprint	ft_memcpy	ft_strchr	\
          ft_strlcpy	ft_strrchr	ft_strncmp	ft_strtrim	ft_putchar_fd	\
 		 ft_putendl_fd	ft_putnbr_fd	ft_putstr_fd	ft_substr	\
-		 ft_strjoin	
+		 ft_strjoin	ft_split
 
 CFLAGS	=	-Wall	-Werror	-Wextra
 

@@ -6,24 +6,27 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:02:07 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/24 19:49:01 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/04/27 19:39:26 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
+	size_t	slen;
 
 	i = 0;
+	slen = ft_strlen(src);
 	if (size <= 0)
-		return (0);
+		return (slen);
 	while (src[i] != '\0' && i < size - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (i);
+	return (slen);
 }

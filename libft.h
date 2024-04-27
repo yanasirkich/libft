@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:50:26 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/25 14:20:10 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/04/27 20:48:03 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *s1); //
-int			ft_strlcat(char *dst, const char *src, size_t size);
-int			ft_strlcpy(char *dst, const char *src, size_t size);
+size_t		ft_strlcat(char *dst, const char *src, size_t size);
+size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *str);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 const char	*ft_strrchr(const char *s, int c);
@@ -45,6 +45,6 @@ void		ft_putnbr_fd(int n, int fd);
 void		ft_putstr_fd(char *s, int fd);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-
+char		**ft_split(char const *s, char c);
 
 #endif

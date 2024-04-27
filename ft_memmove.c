@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/17 13:49:33 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/22 14:49:14 by ysirkich         ###   ########.fr       */
+/*   Created: 2024/04/27 15:24:14 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/04/27 18:29:38 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,31 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*pdest;
+	unsigned char	*pdst;
 	unsigned char	*psrc;
 	size_t			count;
 
-	pdest = (unsigned char *)dst;
+	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
-	count = 0;
-	if (!pdest && !psrc)
+
+	if (!dst || !src)
 		return (NULL);
-	if (pdest > psrc)
+	if (psrc < pdst && pdst < psrc + len)
 	{
-		while (len >= count)
+		count = len - 2;
+		while (len > 0)
 		{
-			*pdest++ = *psrc++;
-			count++;
+			pdst[count] = psrc[count];
+			count--;
 		}
 	}
 	else
 	{
-		while (len > 0)
+		count = 0;
+		while (count < len)
 		{
-			*pdest++ = *psrc++;
-			len--;
+			pdst[count] = psrc[count];
+			count++;
 		}
 	}
 	return (dst);
