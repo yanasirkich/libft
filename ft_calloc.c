@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:55:47 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/27 17:16:03 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:40:42 by yana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_calloc(size_t num_elements, size_t size)
 
 	total = num_elements * size;
 	ptr = malloc(total);
-	//if (ptr == NULL)
-		//return (NULL);
+	if (ptr == NULL)
+		return (NULL);
 	i = 0;
 	if (ptr != NULL)
 	{
