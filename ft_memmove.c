@@ -6,40 +6,46 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 15:24:14 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/27 18:29:38 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:48:21 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*pdst;
 	unsigned char	*psrc;
-	size_t			count;
 
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
-
-	if (!dst || !src)
+	if (dst == NULL && src == NULL)
 		return (NULL);
-	if (psrc < pdst && pdst < psrc + len)
+	if (psrc > pdst)
 	{
-		count = len - 2;
-		while (len > 0)
+		while (len)
 		{
-			pdst[count] = psrc[count];
-			count--;
+			*pdst++ = *psrc++;
+			len--;
 		}
 	}
 	else
 	{
-		count = 0;
-		while (count < len)
+		while (len > 0)
 		{
-			pdst[count] = psrc[count];
-			count++;
+			pdst[len - 1] = psrc[len - 1];
+			len--;
 		}
 	}
 	return (dst);
 }
+
+// #include <stdio.h>
+// #include <string.h>
+// int main (void)
+// {
+// 	char *dst = ft_strdup("hello there");
+// 	const char *src = ft_strdup("");
+// 	ft_memmove(dst, "greetings", 6);
+// 	printf ("%s", dst);
+// }

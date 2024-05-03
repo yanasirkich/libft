@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:19:17 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/24 16:42:44 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:06:58 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,3 @@ int	main(void)
 	printf ("nice %s", ft_strtrim(s1, set));
 }
 */
-

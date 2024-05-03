@@ -6,14 +6,21 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:50:26 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/27 20:48:03 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:10:09 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int			ft_atoi(const char *str);
 void		ft_bzero(void *s, size_t n);
@@ -34,7 +41,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *str);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
-const char	*ft_strrchr(const char *s, int c);
+char		*ft_strrchr(const char *s, int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -46,5 +53,8 @@ void		ft_putstr_fd(char *s, int fd);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		**ft_split(char const *s, char c);
+char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif

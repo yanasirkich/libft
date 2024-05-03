@@ -6,11 +6,11 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:04:11 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/23 18:00:28 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:49:38 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

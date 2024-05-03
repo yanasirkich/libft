@@ -6,11 +6,11 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:46:21 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/25 14:24:20 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:02:15 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -6,15 +6,14 @@
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:49:53 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/26 19:45:10 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:03:12 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_wordcount(const char *s, char c);
-static char	**ft_extract_substring(const char **s, char c, char **str);
+static char	*ft_extract_substring(const char **s, char c);
 static void	ft_free(char **array);
 
 char	**ft_split(char const *s, char c)
@@ -28,22 +27,26 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	i = 0;
-	while (*s)
+	while (*s != '\0')
 	{
 		while (*s == c)
 			s++;
-		ft_extract_substring(&s, c, &array[i]);
-		if (!array[i])
-			ft_free(array);
-		i++;
+		if (*s != '\0')
+		{
+			array[i] = ft_extract_substring(&s, c);
+			if (!array[i])
+				ft_free(array);
+			i++;
+		}
 	}
 	array[i] = NULL;
 	return (array);
 }
 
-static char	**ft_extract_substring(const char **s, char c, char **array)
+static char	*ft_extract_substring(const char **s, char c)
 {
 	const char	*start;
+	char		*substr;
 	size_t		lw;
 
 	lw = 0;
@@ -53,29 +56,29 @@ static char	**ft_extract_substring(const char **s, char c, char **array)
 		lw++;
 		(*s)++;
 	}
-	*array = ft_substr(start, 0, lw);
-	if (!*array)
+	substr = ft_substr(start, 0, lw);
+	if (!substr)
 	{
-		ft_free (array);
+		ft_free (&substr);
 		return (NULL);
 	}
-	lw = 0;
-	return (array);
+	return (substr);
 }
 
 static int	ft_wordcount(const char *s, char c)
 {
 	int	count;
+	int	i;
 
 	count = 0;
-	while (*s)
+	i = 0;
+	if (!s || !*s)
+		return (0);
+	while (s[i])
 	{
-		while (*s == c)
-			s++;
-		if (*s != c && *s)
+		if (s[i] != c && (s[i + 1] == '\0' || s[i + 1] == c))
 			count++;
-		while (*s != c && *s)
-			s++;		
+		i++;
 	}
 	return (count);
 }
@@ -85,6 +88,8 @@ static void	ft_free(char **array)
 	int	i;
 
 	i = 0;
+	if (!array)
+		return ;
 	while (array[i])
 	{
 		free(array[i]);
@@ -96,14 +101,13 @@ static void	ft_free(char **array)
 #include <stdio.h>
 int	main(void)
 {
-	char *str = "1111yana1111whiskey11xxx";
+	char *str = "      split       this for   me  !     fff    ";
 	char **ar;
 	int i = 0;
-	ar = ft_split(str, '1');
+	ar = ft_split(str, ' ');
 	while (ar[i] != NULL)
 	{
 		printf ("substr is %s\n", ar[i]);
 		i++;
 	}
-}
-*/
+}*/
