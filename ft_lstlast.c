@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 18:10:11 by yana              #+#    #+#             */
-/*   Updated: 2024/05/04 18:19:12 by yana             ###   ########.fr       */
+/*   Updated: 2024/05/06 12:45:06 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 t_list  *ft_lstlast(t_list *lst)
 {

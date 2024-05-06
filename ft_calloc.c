@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:55:47 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/04 16:49:53 by yana             ###   ########.fr       */
+/*   Updated: 2024/05/06 13:41:09 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 void	*ft_calloc(size_t num_elements, size_t size)
 {
-	size_t	total;
 	void	*ptr;
 
-	total = num_elements * size;
-	if (num_elements == 0 || size == 0)
-		return (NULL);
-	ptr =(void *)malloc(total);
+	if (num_elements != 0)
+	{
+		if (size > SIZE_MAX / num_elements)
+			return (NULL);
+	}
+	ptr = malloc(num_elements * size);
 	if (!ptr)
 		return (NULL);
-	ft_memset((unsigned char *)ptr, 0, total);
+	ft_bzero(ptr, size * num_elements);
 	return (ptr);
 }

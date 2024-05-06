@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yana <yana@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 14:23:39 by ysirkich          #+#    #+#              #
-#    Updated: 2024/05/04 19:19:53 by yana             ###   ########.fr        #
+#    Updated: 2024/05/06 12:51:27 by ysirkich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,8 +48,8 @@ bonus: $(BONUSOBJS)
 
 all:	$(NAME)
 clean:
-	$(RM)	$(OBJ)
+	$(RM)	$(OBJ) $(BONUSOBJS)
 fclean: clean
 	$(RM)	$(NAME)
 re:	fclean all
-.PHONY:	all	clean	fclean	re
+.PHONY:	all	clean	fclean	re	bonus
