@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:49:53 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/03 15:03:12 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:52:35 by yana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,13 +101,14 @@ static void	ft_free(char **array)
 #include <stdio.h>
 int	main(void)
 {
-	char *str = "      split       this for   me  !     fff    ";
+	char *str = "11111111whiskey1111is1111111stupid111111";
 	char **ar;
 	int i = 0;
-	ar = ft_split(str, ' ');
+	ar = ft_split(str, '1');
 	while (ar[i] != NULL)
 	{
 		printf ("substr is %s\n", ar[i]);
 		i++;
 	}
-}*/
+}
+*/

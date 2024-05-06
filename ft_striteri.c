@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:11:25 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/03 15:04:37 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:34:52 by yana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char*))
 	if (!s || !f)
 		return ;
 	str = (char *)s;
-	if (str != '\0' && f != '\0')
+	if (str != NULL && f != NULL)
 	{
 		i = 0;
 		while (str[i] != '\0')
