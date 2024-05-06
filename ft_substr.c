@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 16:31:21 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/04 17:30:26 by yana             ###   ########.fr       */
+/*   Updated: 2024/05/06 19:51:28 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t len)
 	size_t	i1;
 	size_t	i2;
 
-	if (start + len > ft_strlen(s))
+	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - (size_t)start;
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));

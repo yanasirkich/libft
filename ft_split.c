@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:49:53 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/04 14:52:35 by yana             ###   ########.fr       */
+/*   Updated: 2024/05/06 20:33:15 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s != '\0')
 		{
-			array[i] = ft_extract_substring(&s, c);
-			if (!array[i])
+			array[i++] = ft_extract_substring(&s, c);
+			if (!array[i - 1])
+			{
 				ft_free(array);
-			i++;
+				return (NULL);
+			}
 		}
 	}
 	array[i] = NULL;
@@ -58,10 +60,7 @@ static char	*ft_extract_substring(const char **s, char c)
 	}
 	substr = ft_substr(start, 0, lw);
 	if (!substr)
-	{
-		ft_free (&substr);
-		return (NULL);
-	}
+		substr = NULL;
 	return (substr);
 }
 
