@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:45:20 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/04/16 15:30:49 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/08 15:13:27 by yana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c <= '9' && c >= '0')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
