@@ -6,7 +6,7 @@
 #    By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 14:23:39 by ysirkich          #+#    #+#              #
-#    Updated: 2024/05/06 16:05:18 by ysirkich         ###   ########.fr        #
+#    Updated: 2024/05/09 16:33:43 by ysirkich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,9 +42,12 @@ $(NAME):	$(OBJ)
 	$(AR)	$@	$^
 %.o:	%.c
 	$(CC) $(CFLAGS) -c $< -o $@
+	
+bonus:	.bonus
 
-bonus: $(BONUSOBJS)
+.bonus: $(BONUSOBJS)
 	$(AR) $(NAME) $^
+	@touch .bonus
 
 all:	$(NAME)
 clean:
