@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yana <yana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 15:19:17 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/04 17:29:52 by yana             ###   ########.fr       */
+/*   Created: 2024/05/10 15:05:17 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/05/10 15:05:27 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,3 @@ static int	ft_set(char a, const char *set)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char const	s1[] = "aaaaaaawhiskeyabaa";
-	char const	set[] = "a";
-	printf ("nice %s", ft_strtrim(s1, set));
-}
-*/

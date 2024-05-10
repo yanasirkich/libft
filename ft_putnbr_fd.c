@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 15:04:11 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/03 14:49:38 by ysirkich         ###   ########.fr       */
+/*   Created: 2024/05/10 14:54:26 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/05/10 15:08:20 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = n % 10 + '0';
 	write (fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	ft_putnbr_fd (-2147483648);
-	return (0);
-}
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:20:28 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/09 15:28:22 by ysirkich         ###   ########.fr       */
+/*   Created: 2024/05/10 14:42:45 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/05/10 15:12:13 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*dest;
-	size_t	i; 
+	size_t			i;
 
 	i = 0;
 	dest = (unsigned char *)s;

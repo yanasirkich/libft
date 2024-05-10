@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/03 14:23:39 by ysirkich          #+#    #+#              #
-#    Updated: 2024/05/09 16:33:43 by ysirkich         ###   ########.fr        #
+#    Created: 2024/05/10 15:07:54 by ysirkich          #+#    #+#              #
+#    Updated: 2024/05/10 17:07:28 by ysirkich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  libft.a
 
-CC	=	gcc
+CC	=	cc
 
 CFILES	=	ft_calloc	ft_isascii	ft_memchr	ft_memmove	ft_strdup	\
          ft_strlen	ft_tolower	ft_atoi	ft_isalnum	ft_isdigit	\

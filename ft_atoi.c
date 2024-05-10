@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 16:45:35 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/09 18:30:40 by ysirkich         ###   ########.fr       */
+/*   Created: 2024/05/10 14:41:57 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/05/10 14:42:20 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_atoi(const char *str)
 {
-	int	sign;
+	int			sign;
 	long int	result;
 	long int	check;
 
@@ -32,13 +30,11 @@ int	ft_atoi(const char *str)
 	while (*str && ('0' <= *str && *str <= '9'))
 	{
 		check = result;
-		result = result *10 + *str - '0';
+		result = result * 10 + *str++ - '0';
 		if (result / 10 != check && sign < 0)
 			return (0);
 		if (result / 10 != check && sign > 0)
 			return (-1);
-		str++;
 	}
 	return (result * sign);
 }
-

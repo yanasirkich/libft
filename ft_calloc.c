@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/19 17:55:47 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/09 16:27:35 by ysirkich         ###   ########.fr       */
+/*   Created: 2024/05/10 14:43:25 by ysirkich          #+#    #+#             */
+/*   Updated: 2024/05/10 17:21:55 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (!count || !size)
 		return (malloc(0));
-	if (size > SIZE_MAX / count)
+	if (size > UINT_MAX / count)
 		return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
