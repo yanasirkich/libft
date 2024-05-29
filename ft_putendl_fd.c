@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:53:45 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 14:53:47 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:33:01 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
-	i = 0;
-	if (s == NULL)
+	if (!s)
 		return ;
+	i = 0;
 	while (s[i] != '\0')
 	{
 		write (fd, &s[i], 1);

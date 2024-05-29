@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:56:04 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 14:56:09 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:36:22 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *) &s[i]);

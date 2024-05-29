@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 15:03:06 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 15:12:38 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:39:59 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2 && n > 0)
+	while (*s1 && *s2 && *s1 == *s2 && n > 0)
 	{
 		s1++;
 		s2++;

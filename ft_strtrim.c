@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 15:05:17 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 15:05:27 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:40:34 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	before = 0;
 	after = ft_strlen(s1);
-	while (s1[before] != '\0' && ft_set(s1[before], set))
+	while (s1[before] && ft_set(s1[before], set))
 		before++;
 	while (after > before && ft_set(s1[after - 1], set))
 		after--;

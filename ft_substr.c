@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 15:05:44 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 15:05:50 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:41:01 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t len)
 		return (NULL);
 	i1 = 0;
 	i2 = 0;
-	while (s[i1] != '\0')
+	while (s[i1])
 	{
 		if (i1 >= start && i2 < len)
 		{

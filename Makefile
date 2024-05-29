@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ysirkich <ysirkich@student.42.fr>          +#+  +:+       +#+         #
+#    By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 15:07:54 by ysirkich          #+#    #+#              #
-#    Updated: 2024/05/10 17:07:28 by ysirkich         ###   ########.fr        #
+#    Updated: 2024/05/30 01:28:24 by ysirkich         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,37 +22,46 @@ CFILES	=	ft_calloc	ft_isascii	ft_memchr	ft_memmove	ft_strdup	\
 		 ft_putendl_fd	ft_putnbr_fd	ft_putstr_fd	ft_substr	\
 		 ft_strjoin	ft_split	ft_itoa	ft_strmapi	ft_striteri
 
-BONUSFILES	=	ft_lstnew	ft_lstadd_front	ft_lstsize	ft_lstlast	ft_lstadd_back	\
-				ft_lstdelone	ft_lstclear	ft_lstiter	ft_lstmap
+BONUSFILES	=	ft_lstnew_bonus	ft_lstadd_front_bonus	ft_lstsize_bonus	\
+				ft_lstlast_bonus	ft_lstadd_back_bonus	ft_lstdelone_bonus	\
+				ft_lstclear_bonus	ft_lstiter_bonus	ft_lstmap_bonus	\
 
-CFLAGS	=	-Wall	-Werror	-Wextra
+CFLAGS	=	-Wall	-Werror	-Wextra	-I./
 
-AR	=	ar	rcs
+AR	=	ar
 RM	=	rm	-f
 
 SRC_DIR	=	./
+BONUS_DIR = ./bonus/
+
 SRC	=	$(addprefix	$(SRC_DIR),	$(addsuffix	.c,	$(CFILES)))
-BONUSSRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(BONUSFILES)))
+BONUS_SRC = $(addprefix $(BONUS_DIR), $(addsuffix .c, $(BONUSFILES)))
 
 OBJ_DIR	=	./
 OBJ	=	$(addprefix	$(OBJ_DIR),	$(addsuffix	.o,	$(CFILES)))
-BONUSOBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(BONUSFILES)))
+BONUS_OBJS = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(BONUSFILES)))
 
 $(NAME):	$(OBJ)
-	$(AR)	$@	$^
-%.o:	%.c
-	$(CC) $(CFLAGS) -c $< -o $@
-	
-bonus:	.bonus
+	$(AR) rcs	$@	$^
 
-.bonus: $(BONUSOBJS)
-	$(AR) $(NAME) $^
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJ_DIR)%.o: $(BONUS_DIR)%.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus:	$(BONUS_OBJS)
+	$(AR) rcs $(NAME)	$^
 	@touch .bonus
 
 all:	$(NAME)
+
 clean:
-	$(RM)	$(OBJ) $(BONUSOBJS)
+	$(RM)	$(OBJ) $(BONUS_OBJS)	.bonus
+
 fclean: clean
 	$(RM)	$(NAME)
+
 re:	fclean all
+
 .PHONY:	all	clean	fclean	re	bonus

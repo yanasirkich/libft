@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:55:16 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 14:55:19 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:35:38 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	i = 0;
-	if (!s[i])
+	if (!s)
 		return ;
+	i = 0;
 	while (s[i] != '\0')
 	{
 		write (fd, &s[i], 1);

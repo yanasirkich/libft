@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:52:15 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 14:52:33 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:45:49 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 
+	if (!dst && !src)
+		return (NULL);
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
-	if (dst == NULL && src == NULL)
-		return (NULL);
 	if (psrc > pdst)
 	{
 		while (len)
@@ -39,13 +39,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main (void)
-// {
-// 	char *dst = ft_strdup("hello there");
-// 	const char *src = ft_strdup("");
-// 	ft_memmove(dst, "greetings", 6);
-// 	printf ("%s", dst);
-// }

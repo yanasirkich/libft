@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:55:37 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 14:55:44 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:35:58 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,18 +96,3 @@ static void	ft_free(char **array)
 	}
 	free(array);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char *str = "11111111whiskey1111is1111111stupid111111";
-	char **ar;
-	int i = 0;
-	ar = ft_split(str, '1');
-	while (ar[i] != NULL)
-	{
-		printf ("substr is %s\n", ar[i]);
-		i++;
-	}
-}
-*/

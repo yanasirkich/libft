@@ -6,7 +6,7 @@
 /*   By: ysirkich <ysirkich@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:56:32 by ysirkich          #+#    #+#             */
-/*   Updated: 2024/05/10 14:57:17 by ysirkich         ###   ########.fr       */
+/*   Updated: 2024/05/30 01:37:36 by ysirkich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	len = ft_strlen(s1);
-	if (s1 == NULL)
+	if (!s1)
 		return (NULL);
 	s2 = (char *)malloc((len + 1) * sizeof(char));
-	if (s2 == NULL)
+	if (!s2)
 		return (NULL);
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
 		s2[i] = s1[i];
 		i++;
